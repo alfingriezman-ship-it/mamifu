@@ -1,0 +1,448 @@
+<html class="scroll-smooth" lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Website Pengumpulan Tugas Digital - MA Miftahul Ulum
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-50 min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+   <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+     <img alt="Logo MA Miftahul Ulum, a green and white emblem with Islamic calligraphy" class="w-12 h-12 rounded-full" height="48" src="https://storage.googleapis.com/a1aa/image/59df223e-df07-4772-9dc5-efe21c7ef887.jpg" width="48"/>
+     <h1 class="text-2xl font-semibold text-green-700">
+      MA Miftahul Ulum
+     </h1>
+    </div>
+    <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+     <a class="hover:text-green-700 transition" href="#home">
+      Beranda
+     </a>
+     <a class="hover:text-green-700 transition" href="#submit">
+      Kumpulkan Tugas
+     </a>
+     <a class="hover:text-green-700 transition" href="#daftar-tugas">
+      Daftar Tugas
+     </a>
+     <a class="hover:text-green-700 transition" href="#tentang">
+      Tentang
+     </a>
+     <a class="hover:text-green-700 transition" href="#kontak">
+      Kontak
+     </a>
+    </nav>
+    <button aria-label="Toggle menu" class="md:hidden text-green-700 focus:outline-none" id="menu-btn">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </div>
+   <nav class="md:hidden bg-white shadow-md hidden flex-col space-y-2 px-4 pb-4" id="mobile-menu">
+    <a class="block py-2 text-gray-700 font-medium hover:text-green-700 transition" href="#home">
+     Beranda
+    </a>
+    <a class="block py-2 text-gray-700 font-medium hover:text-green-700 transition" href="#submit">
+     Kumpulkan Tugas
+    </a>
+    <a class="block py-2 text-gray-700 font-medium hover:text-green-700 transition" href="#daftar-tugas">
+     Daftar Tugas
+    </a>
+    <a class="block py-2 text-gray-700 font-medium hover:text-green-700 transition" href="#tentang">
+     Tentang
+    </a>
+    <a class="block py-2 text-gray-700 font-medium hover:text-green-700 transition" href="#kontak">
+     Kontak
+    </a>
+   </nav>
+  </header>
+  <!-- Hero Section -->
+  <section class="bg-green-700 text-white py-20 px-6 flex flex-col items-center text-center" id="home">
+   <h2 class="text-4xl md:text-5xl font-extrabold max-w-3xl leading-tight">
+    Selamat Datang di Website Pengumpulan Tugas Digital
+   </h2>
+   <p class="mt-4 max-w-xl text-lg md:text-xl">
+    MA Miftahul Ulum memudahkan siswa untuk mengumpulkan tugas secara online dengan cepat dan aman.
+   </p>
+   <a class="mt-8 inline-block bg-white text-green-700 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition" href="#submit">
+    Kumpulkan Tugas Sekarang
+   </a>
+  </section>
+  <!-- Submit Task Section -->
+  <section class="container mx-auto px-6 py-16 bg-white rounded-lg shadow-md mt-12 max-w-4xl" id="submit">
+   <h3 class="text-3xl font-semibold text-green-700 mb-8 text-center">
+    Form Pengumpulan Tugas
+   </h3>
+   <form class="space-y-6" enctype="multipart/form-data" id="taskForm" novalidate="">
+    <div>
+     <label class="block text-gray-700 font-medium mb-2" for="nama">
+      Nama Lengkap
+     </label>
+     <input class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" required="" type="text"/>
+    </div>
+    <div>
+     <label class="block text-gray-700 font-medium mb-2" for="kelas">
+      Kelas
+     </label>
+     <select class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" id="kelas" name="kelas" required="">
+      <option disabled="" selected="" value="">
+       Pilih kelas
+      </option>
+      <option value="X IPA 1">
+       X IPA 1
+      </option>
+      <option value="X IPA 2">
+       X IPA 2
+      </option>
+      <option value="X IPS 1">
+       X IPS 1
+      </option>
+      <option value="XI IPA 1">
+       XI IPA 1
+      </option>
+      <option value="XI IPA 2">
+       XI IPA 2
+      </option>
+      <option value="XI IPS 1">
+       XI IPS 1
+      </option>
+      <option value="XII IPA 1">
+       XII IPA 1
+      </option>
+      <option value="XII IPA 2">
+       XII IPA 2
+      </option>
+      <option value="XII IPS 1">
+       XII IPS 1
+      </option>
+     </select>
+    </div>
+    <div>
+     <label class="block text-gray-700 font-medium mb-2" for="mataPelajaran">
+      Mata Pelajaran
+     </label>
+     <select class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" id="mataPelajaran" name="mataPelajaran" required="">
+      <option disabled="" selected="" value="">
+       Pilih mata pelajaran
+      </option>
+      <option value="Matematika">
+       Matematika
+      </option>
+      <option value="Bahasa Indonesia">
+       Bahasa Indonesia
+      </option>
+      <option value="Bahasa Inggris">
+       Bahasa Inggris
+      </option>
+      <option value="Fisika">
+       Fisika
+      </option>
+      <option value="Kimia">
+       Kimia
+      </option>
+      <option value="Biologi">
+       Biologi
+      </option>
+      <option value="Sejarah">
+       Sejarah
+      </option>
+      <option value="Pendidikan Agama Islam">
+       Pendidikan Agama Islam
+      </option>
+      <option value="Ekonomi">
+       Ekonomi
+      </option>
+     </select>
+    </div>
+    <div>
+     <label class="block text-gray-700 font-medium mb-2" for="judulTugas">
+      Judul Tugas
+     </label>
+     <input class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" id="judulTugas" name="judulTugas" placeholder="Masukkan judul tugas" required="" type="text"/>
+    </div>
+    <div>
+     <label class="block text-gray-700 font-medium mb-2" for="fileTugas">
+      Upload File Tugas (PDF, DOC, DOCX, JPG, PNG)
+     </label>
+     <input accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" class="w-full text-gray-700" id="fileTugas" name="fileTugas" required="" type="file"/>
+    </div>
+    <div class="text-center">
+     <button class="bg-green-700 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-green-800 transition" type="submit">
+      Kirim Tugas
+     </button>
+    </div>
+   </form>
+   <p class="mt-4 text-center font-medium text-sm hidden" id="formMessage">
+   </p>
+  </section>
+  <!-- Submitted Tasks List -->
+  <section class="container mx-auto px-6 py-16 max-w-5xl" id="daftar-tugas">
+   <h3 class="text-3xl font-semibold text-green-700 mb-8 text-center">
+    Daftar Tugas yang Telah Dikirim
+   </h3>
+   <div class="space-y-6" id="tasksList">
+    <div class="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row md:items-center md:justify-between">
+     <div>
+      <h4 class="text-xl font-semibold text-green-700">
+       Tugas Matematika: Persamaan Kuadrat
+      </h4>
+      <p class="text-gray-700">
+       Nama: Ahmad Fauzi | Kelas: X IPA 1
+      </p>
+      <p class="text-gray-600 italic text-sm mt-1">
+       Dikirim pada: 2024-06-01 14:30
+      </p>
+     </div>
+     <a class="mt-4 md:mt-0 inline-flex items-center space-x-2 text-green-700 font-semibold hover:underline" download="" href="https://placehold.co/200x260/png?text=File+Tugas+Matematika" rel="noopener noreferrer" target="_blank">
+      <i class="fas fa-file-download">
+      </i>
+      <span>
+       Download File
+      </span>
+     </a>
+    </div>
+    <div class="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row md:items-center md:justify-between">
+     <div>
+      <h4 class="text-xl font-semibold text-green-700">
+       Tugas Bahasa Inggris: Essay My Hobby
+      </h4>
+      <p class="text-gray-700">
+       Nama: Siti Nurhaliza | Kelas: XI IPA 2
+      </p>
+      <p class="text-gray-600 italic text-sm mt-1">
+       Dikirim pada: 2024-06-02 09:15
+      </p>
+     </div>
+     <a class="mt-4 md:mt-0 inline-flex items-center space-x-2 text-green-700 font-semibold hover:underline" download="" href="https://placehold.co/200x260/png?text=File+Tugas+Bahasa+Inggris" rel="noopener noreferrer" target="_blank">
+      <i class="fas fa-file-download">
+      </i>
+      <span>
+       Download File
+      </span>
+     </a>
+    </div>
+    <div class="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row md:items-center md:justify-between">
+     <div>
+      <h4 class="text-xl font-semibold text-green-700">
+       Tugas Fisika: Hukum Newton
+      </h4>
+      <p class="text-gray-700">
+       Nama: Budi Santoso | Kelas: XII IPA 1
+      </p>
+      <p class="text-gray-600 italic text-sm mt-1">
+       Dikirim pada: 2024-06-03 11:45
+      </p>
+     </div>
+     <a class="mt-4 md:mt-0 inline-flex items-center space-x-2 text-green-700 font-semibold hover:underline" download="" href="https://placehold.co/200x260/png?text=File+Tugas+Fisika" rel="noopener noreferrer" target="_blank">
+      <i class="fas fa-file-download">
+      </i>
+      <span>
+       Download File
+      </span>
+     </a>
+    </div>
+    <div class="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row md:items-center md:justify-between">
+     <div>
+      <h4 class="text-xl font-semibold text-green-700">
+       Tugas Sejarah: Perang Dunia II
+      </h4>
+      <p class="text-gray-700">
+       Nama: Dewi Lestari | Kelas: XI IPS 1
+      </p>
+      <p class="text-gray-600 italic text-sm mt-1">
+       Dikirim pada: 2024-06-04 13:20
+      </p>
+     </div>
+     <a class="mt-4 md:mt-0 inline-flex items-center space-x-2 text-green-700 font-semibold hover:underline" download="" href="https://placehold.co/200x260/png?text=File+Tugas+Sejarah" rel="noopener noreferrer" target="_blank">
+      <i class="fas fa-file-download">
+      </i>
+      <span>
+       Download File
+      </span>
+     </a>
+    </div>
+    <div class="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row md:items-center md:justify-between">
+     <div>
+      <h4 class="text-xl font-semibold text-green-700">
+       Tugas Kimia: Struktur Atom
+      </h4>
+      <p class="text-gray-700">
+       Nama: Rina Putri | Kelas: X IPA 2
+      </p>
+      <p class="text-gray-600 italic text-sm mt-1">
+       Dikirim pada: 2024-06-05 10:05
+      </p>
+     </div>
+     <a class="mt-4 md:mt-0 inline-flex items-center space-x-2 text-green-700 font-semibold hover:underline" download="" href="https://placehold.co/200x260/png?text=File+Tugas+Kimia" rel="noopener noreferrer" target="_blank">
+      <i class="fas fa-file-download">
+      </i>
+      <span>
+       Download File
+      </span>
+     </a>
+    </div>
+   </div>
+  </section>
+  <!-- About Section -->
+  <section class="bg-green-100 py-16 px-6" id="tentang">
+   <div class="container mx-auto max-w-4xl text-center">
+    <h3 class="text-3xl font-semibold text-green-700 mb-6">
+     Tentang MA Miftahul Ulum
+    </h3>
+    <img alt="Gedung MA Miftahul Ulum, a modern school building with green and white colors, surrounded by trees and students" class="mx-auto rounded-lg shadow-lg mb-6" height="300" src="https://storage.googleapis.com/a1aa/image/926ccc63-b79d-48cd-6435-1327c28902e8.jpg" width="600"/>
+    <p class="text-gray-700 text-lg leading-relaxed">
+     MA Miftahul Ulum adalah madrasah aliyah yang berkomitmen memberikan pendidikan terbaik dengan mengintegrasikan ilmu agama dan ilmu pengetahuan umum. Kami mendukung kemajuan teknologi dengan menyediakan platform digital untuk memudahkan siswa dalam pengumpulan tugas dan komunikasi dengan guru.
+    </p>
+   </div>
+  </section>
+  <!-- Contact Section -->
+  <section class="container mx-auto px-6 py-16 max-w-4xl" id="kontak">
+   <h3 class="text-3xl font-semibold text-green-700 mb-8 text-center">
+    Kontak Kami
+   </h3>
+   <div class="bg-white rounded-lg shadow-md p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div>
+     <h4 class="text-xl font-semibold text-green-700 mb-4">
+      Informasi Kontak
+     </h4>
+     <p class="text-gray-700 mb-2">
+      <i class="fas fa-map-marker-alt mr-2 text-green-700">
+      </i>
+      Jl. Raya Miftahul Ulum No.123, Kabupaten, Jawa Timur, Indonesia
+     </p>
+     <p class="text-gray-700 mb-2">
+      <i class="fas fa-phone mr-2 text-green-700">
+      </i>
+      +62 812-3456-7890
+     </p>
+     <p class="text-gray-700 mb-2">
+      <i class="fas fa-envelope mr-2 text-green-700">
+      </i>
+      info@miftahululum.sch.id
+     </p>
+     <p class="text-gray-700">
+      <i class="fas fa-globe mr-2 text-green-700">
+      </i>
+      www.miftahululum.sch.id
+     </p>
+    </div>
+    <div>
+     <h4 class="text-xl font-semibold text-green-700 mb-4">
+      Lokasi Sekolah
+     </h4>
+     <img alt="Peta lokasi MA Miftahul Ulum, showing the school location on a map with nearby roads and landmarks" class="rounded-lg shadow-md w-full h-auto" height="300" src="https://storage.googleapis.com/a1aa/image/4cabbcee-4872-4b85-c940-2259a3f4a2ca.jpg" width="400"/>
+    </div>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white py-6 mt-auto">
+   <div class="container mx-auto px-6 text-center text-sm">
+    © 2024 MA Miftahul Ulum. Semua hak cipta dilindungi.
+   </div>
+  </footer>
+  <script>
+   // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Form submission handling (simulate submission and add to list)
+    const taskForm = document.getElementById('taskForm');
+    const tasksList = document.getElementById('tasksList');
+    const formMessage = document.getElementById('formMessage');
+
+    taskForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Validate form manually (HTML5 validation should handle most)
+      if (!taskForm.checkValidity()) {
+        formMessage.textContent = 'Mohon lengkapi semua bidang yang diperlukan.';
+        formMessage.className = 'mt-4 text-center font-medium text-red-600';
+        formMessage.classList.remove('hidden');
+        return;
+      }
+
+      // Get form values
+      const nama = taskForm.nama.value.trim();
+      const kelas = taskForm.kelas.value;
+      const mataPelajaran = taskForm.mataPelajaran.value;
+      const judulTugas = taskForm.judulTugas.value.trim();
+      const fileInput = taskForm.fileTugas;
+      const file = fileInput.files[0];
+
+      if (!file) {
+        formMessage.textContent = 'Mohon upload file tugas.';
+        formMessage.className = 'mt-4 text-center font-medium text-red-600';
+        formMessage.classList.remove('hidden');
+        return;
+      }
+
+      // Create a URL for the uploaded file to simulate download link
+      const fileURL = URL.createObjectURL(file);
+
+      // Format current date and time
+      const now = new Date();
+      const formattedDate = now.toISOString().slice(0, 16).replace('T', ' ');
+
+      // Create new task element
+      const taskItem = document.createElement('div');
+      taskItem.className =
+        'bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row md:items-center md:justify-between';
+
+      const taskInfo = document.createElement('div');
+      taskInfo.innerHTML = `
+        <h4 class="text-xl font-semibold text-green-700">
+          Tugas ${mataPelajaran}: ${judulTugas}
+        </h4>
+        <p class="text-gray-700">
+          Nama: ${nama} | Kelas: ${kelas}
+        </p>
+        <p class="text-gray-600 italic text-sm mt-1">
+          Dikirim pada: ${formattedDate}
+        </p>
+      `;
+
+      const downloadLink = document.createElement('a');
+      downloadLink.href = fileURL;
+      downloadLink.target = '_blank';
+      downloadLink.rel = 'noopener noreferrer';
+      downloadLink.download = file.name;
+      downloadLink.className =
+        'mt-4 md:mt-0 inline-flex items-center space-x-2 text-green-700 font-semibold hover:underline';
+      downloadLink.innerHTML = `
+        <i class="fas fa-file-download"></i>
+        <span>Download File</span>
+      `;
+
+      taskItem.appendChild(taskInfo);
+      taskItem.appendChild(downloadLink);
+
+      // Add new task to the top of the list
+      tasksList.prepend(taskItem);
+
+      // Reset form and message
+      taskForm.reset();
+      formMessage.textContent = 'Tugas berhasil dikirim!';
+      formMessage.className = 'mt-4 text-center font-medium text-green-700';
+      formMessage.classList.remove('hidden');
+
+      // Hide message after 4 seconds
+      setTimeout(() => {
+        formMessage.classList.add('hidden');
+      }, 4000);
+    });
+  </script>
+ </body>
+</html>
